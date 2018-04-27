@@ -11,3 +11,11 @@
 test: balanced.o
 	g++ -std=c++11 -g *.o balancedTest.cpp -o balancedTest
 	./balancedTest
+CXXFLAGS=-std=c++11 -fprofile-arcs -ftest-coverage -g
+
+balanced.o:
+	g++ $(CXXFLAGS) -c balanced.cpp -o balanced.o
+
+test: balanced.o
+	g++ $(CXXFLAGS) *.o balancedTest.cpp -o balancedTest
+	./balancedTest
