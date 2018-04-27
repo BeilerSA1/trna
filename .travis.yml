@@ -2,3 +2,11 @@
 language: cpp
 compiler: gcc
 script: make && make test
+
+CXXFLAGS=-std=c++11 -fprofile-arcs -ftest-coverage -g
+
+balanced.o:
+	g++ $(CXXFLAGS) -c balanced.cpp -o balanced.o
+
+test: balanced.o
+	g++ $(CXXFLAGS) *.o balancedTest.cpp -o balancedTest./balencedTest
