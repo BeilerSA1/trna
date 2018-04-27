@@ -2,7 +2,3 @@
 language: cpp
 compiler: gcc
 script: make && make test
-
-# command to run tests
-script: "python simple_tests.py"
-
