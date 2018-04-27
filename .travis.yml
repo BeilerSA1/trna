@@ -9,7 +9,8 @@ balanced.o:
 	g++ $(CXXFLAGS) -c balanced.cpp -o balanced.o
 
 test: balanced.o
-	g++ $(CXXFLAGS) *.o balancedTest.cpp -o balancedTest./balencedTest
+	g++ $(CXXFLAGS) *.o balancedTest.cpp -o balancedTest
+	./balencedTest
 
 before_install:
 	- pip install --user cpp-coveralls
