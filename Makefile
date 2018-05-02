@@ -20,4 +20,5 @@ balanced.o:
 	g++ $(CXXFLAGS) -g -c balanced.cpp -o balanced.o
 
 test: balanced.o
-	g++ $(CXXFLAGS) *.o balancedTest.cpp -o balancedTest ./balancedTest
+	g++ $(CXXFLAGS) *.o balancedTest.cpp -o balancedTest 
+	./balancedTest
